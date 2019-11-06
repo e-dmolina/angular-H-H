@@ -7,7 +7,7 @@ import { Router } from '@angular/router'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'angular-H-H';
 
   constructor( private router:Router ){
