@@ -1,0 +1,23 @@
+<div class="container pt-3">
+    <h1>Proyectos</h1>
+    <hr>
+
+    <div class="card-columns">
+
+        <div class="card animated fadeIn fast" *ngFor="let item of proyectos; let i=index">
+
+            <img [src]="item.img[0]" class="card-img-top" [alt]="item.nombre">
+
+            <div class="card-body">
+                <h5 class="card-title">{{item.nombre}}</h5>
+                <p class="card-text">{{item.info}}</p>
+                <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet.</small></p>
+                <p>Categoría: {{item.categoria}}</p>
+
+                <button type="button" class="btn btn-outline-primary btn-block" (click)="verProyecto(i)">Ver
+                    más..</button>
+                <!-- <a [routerLink]="['/proyecto', i]" class="btn btn-outline-primary">Ver Proyecto</a> -->
+            </div>
+        </div>
+    </div>
+</div>
