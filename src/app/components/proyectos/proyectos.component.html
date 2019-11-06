@@ -5,8 +5,9 @@
     <div class="card-columns">
 
         <div class="card animated fadeIn fast" *ngFor="let item of proyectos; let i=index">
-
-            <img [src]="item.img[0]" class="card-img-top" [alt]="item.nombre">
+            <a [routerLink]="['/proyecto', i]" href="">
+                <img [src]="item.img[0]" class="card-img-top" [alt]="item.nombre">
+            </a>
 
             <div class="card-body">
                 <h5 class="card-title">{{item.nombre}}</h5>
