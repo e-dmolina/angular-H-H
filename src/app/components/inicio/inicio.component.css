@@ -1,0 +1,52 @@
+.imagen2{
+    width: 100%;
+    min-height: 400px;
+    background-image: url("https://www.arqhys.com/wp-content/fotos/2012/06/Biblioteca-central-de-Seattle.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+}
+
+
+.titulos{
+    margin-top: 100px;
+}
+
+.caja{
+    width: 100%;
+    min-height: 350px;
+    text-align: center;
+}
+
+.opaco{
+    background-color: rgba(92, 92, 87, 0.5);
+}
+
+/*cambiar de color las flechas del slide*/
+
+/* .carousel-control-prev,
+.carousel-control-next{
+    height: 100px;
+    width: 100px;
+    outline: black;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 1px, solid black;
+    background-image: none;
+} */
+
+.color-arrow-next:after{
+    content: '>';
+    font-size: 55px;
+    color: grey;
+}
+
+.color-arrow-prev:after{
+    content: '<';
+    font-size: 55px;
+    color: grey;
+}

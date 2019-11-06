@@ -1,0 +1,70 @@
+<div class="container pt-3">
+    <h1 class="animated fadeIn">{{proyecto.nombre}}</h1>
+    <hr>
+    <br>
+
+    <div class="row animated fadeIn fast">
+        <div class="col-md-4">
+            <img [src]="proyecto.img[0]" alt="" class="img-fluid">
+            <br>
+            <br>
+            <a class="btn btn-outline-danger btn-block" [routerLink]="[ '/proyectos' ]">Volver</a>
+        </div>
+
+        <div class="col-md-8">
+            <h3>{{proyecto.nombre}}</h3>
+            <p>Categoría: {{proyecto.categoria}}</p>
+            <p>{{proyecto.info}}</p>
+        </div>
+    </div>
+
+
+    <!-- <h4 class="mt-2">Video de Youtube</h4>
+    <hr>
+
+    <iframe width="560" height="315" [src]="video | domseguro:'https://www.youtube.com/embed/'" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+    <div class="card-columns mt-5">
+        <div *ngFor="let item of proyecto.img; let i=index">
+            <!-- Button trigger modal -->
+            <div class="card">
+                <a href="" data-toggle="modal" data-target="#exampleModal" (click)="obtenerImagen(i)">
+                    <img [src]="item" class="card-img-top" alt="">
+                </a>
+            </div>
+            <!-- Modal -->
+            <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <button type="button" class="close mt-5" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times; Cerrrar</span>
+                </button>
+                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                    <div class="modal-body">
+                        <img [src]="imagen" alt="" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="modal" id="exampleModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">{{proyecto.nombre}}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <img [src]="imagen" alt="" class="img-fluid rounded">
+                        </div>
+                        <!-- <div class="modal-footer"></div>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
