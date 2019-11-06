@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-//ng-bootstrap
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 //Rutas
 import { AppRoutingModule } from './app-routing.module';
@@ -35,8 +33,7 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    NgbModule
+    AppRoutingModule
   ],
   providers: [
     ProyectosService
