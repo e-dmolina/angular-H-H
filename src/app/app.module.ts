@@ -18,6 +18,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
     ContactoComponent,
     FooterComponent,
     ProyectoComponent,
-    DomseguroPipe
+    DomseguroPipe,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
