@@ -2,11 +2,12 @@
     <h1>Proyectos</h1>
     <hr>
 
-    <app-loading></app-loading>
+    <app-loading *ngIf="loading"></app-loading>
 
     <div class="card-columns">
 
         <div class="card animated fadeIn fast" *ngFor="let item of proyectos; let i=index">
+            
             <a [routerLink]="['/proyecto', i]" href="">
                 <img [src]="item.img[0]" class="card-img-top" [alt]="item.nombre">
             </a>
