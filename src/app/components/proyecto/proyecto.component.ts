@@ -12,13 +12,17 @@ export class ProyectoComponent implements OnInit {
 
   proyecto:any = {};
   imagen="";
-  video="Ld0ZQp2ar2Y";
+  loading:boolean;
 
   constructor( private activatedRoute:ActivatedRoute,
                private _proyectosService:ProyectosService) { 
 
     this.activatedRoute.params.subscribe( params => {
+
+      this.loading = true;
+
       this.proyecto = this._proyectosService.getProyecto(params['id']);
+      this.loading = false;
     });
 
   }
