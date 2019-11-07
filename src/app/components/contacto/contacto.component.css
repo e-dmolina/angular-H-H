@@ -1,12 +1,14 @@
 .fondo{
     background-image: url("https://k61.kn3.net/taringa/7/D/1/D/7/7/sotelocruz92/267.jpg");
-    background-size: cover;
+    background-size: cover; 
+    overflow: hidden;
 }
 
 .contact-form{
     background-color: rgba(0, 0, 0, .6);
     color: white;
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     padding: 20px;
     box-shadow: 0px 0px 10px 3 grey;
 }
