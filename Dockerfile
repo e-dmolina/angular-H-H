@@ -6,11 +6,9 @@ WORKDIR /app
 COPY ./ /app/
 
 RUN npm install
-<<<<<<< HEAD
+
 RUN npm run build -- --prod
-=======
-RUN npm run build --prod
->>>>>>> develop
+
 
 #stage 1, based on Nginx
 FROM nginx:alpine
