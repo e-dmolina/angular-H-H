@@ -1,9 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-//Google maps
-import { AgmCoreModule } from '@agm/core';
-
 //Rutas
 import { AppRoutingModule } from './app-routing.module';
 
