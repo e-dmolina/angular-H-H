@@ -10,7 +10,7 @@ export class FormulariosService {
 
   enviarMail(formulario){
     
-    return this.hhtp.post('https://fathomless-escarpment-25780.herokuapp.com/email',formulario);
-
+    return this.hhtp.post('http://18.229.159.69:3000/email',formulario);
+    
   }
 }
