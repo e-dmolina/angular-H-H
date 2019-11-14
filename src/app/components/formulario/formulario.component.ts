@@ -22,8 +22,9 @@ export class FormularioComponent implements OnInit {
   }
 
   enviar(f:NgForm){
+    
     this._formulariosService.enviarMail(f.value)
-            .subscribe( data => console.log(data));
+            .subscribe( data => console.log(data), err => console.log(err));
   }
 
 }
