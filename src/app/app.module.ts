@@ -1,11 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 //Rutas
 import { AppRoutingModule } from './app-routing.module';
 
 //Servicios
 import { ProyectosService } from './services/proyectos.service';
+import { FormulariosService } from './services/formularios.service';
 
 //Componentes
 import { AppComponent } from './app.component';
@@ -18,6 +22,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+import { FormularioComponent } from './components/formulario/formulario.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +35,17 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     FooterComponent,
     ProyectoComponent,
     DomseguroPipe,
-    LoadingComponent  ],
+    LoadingComponent,
+    FormularioComponent  ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
-    ProyectosService
+    ProyectosService,
+    FormulariosService
   ],
   bootstrap: [AppComponent]
 })
